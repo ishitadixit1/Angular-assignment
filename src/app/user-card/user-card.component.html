@@ -1,6 +1,19 @@
-<p>User List :</p>
-<div *ngFor="let user of userData">
-      <a [routerLink]="['/user-details',user.id]">{{user.id}} : {{user.name}}</a>  
-      <br><br>
+<h3 class="text-center mt-2">User List :</h3>
+<div class="m-2 p-2 flex row flex-wrap">
+<div class="card" style="width: 18rem;" *ngFor="let user of userData">
+      <!-- <img  src="../../../user.png"/> -->
+      <div class="mt-6 w-fit mx-auto">
+            <img
+            src="../../assets/user.png"
+            class="rounded-full w-28"
+          />
+          </div>
+     
+      <div class="card-body">
+        <h5 class="card-title">{{user.name}}</h5>
+        <p class="card-text">{{user.username}}</p>
+        <a [routerLink]="['/user-details',user.id]" class="btn btn-primary">Details</a>
+      </div>
+</div> 
 </div>
 
