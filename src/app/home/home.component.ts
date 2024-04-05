@@ -1,6 +1,4 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 
 @Component({
@@ -14,6 +12,5 @@ export class HomeComponent{
 
     ngOnInit():void{
       this.userData = this.userService.getUsers();
-      // console.log(this.userData);
     }
 }

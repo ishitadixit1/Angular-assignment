@@ -17,7 +17,7 @@ export class UserService {
       return this.userData;
   }
 
-  // ngOnDestroy() {
-  //     this.subscription.unsubscribe();
-  // }
+  ngOnDestroy() {
+      this.subscription.unsubscribe();
+  }
 }
