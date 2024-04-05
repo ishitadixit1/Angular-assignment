@@ -22,7 +22,6 @@ export class UserDetailsComponent {
 
    ngOnInit():void{
      this.id = this.route.snapshot.params['id'];
-     console.log(this.id);
      this.myUser();
    }
 
@@ -30,9 +29,7 @@ export class UserDetailsComponent {
      this.http.get('https://jsonplaceholder.typicode.com/users/' + this.id).subscribe((user) => 
      {
           this.users = user;
-          console.log(this.users);
       }
       );
-      console.log(this.users);
   }
 }

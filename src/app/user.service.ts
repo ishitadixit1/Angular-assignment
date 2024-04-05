@@ -7,17 +7,12 @@ import { Observable, Subscription } from 'rxjs';
 })
 export class UserService {
   userData: any;
-  subscription!: Subscription;
   constructor(private http : HttpClient) { }
 
   getUsers():Observable<any[]>{
-      this.subscription = this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((data)=>{
+       this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((data)=>{
          this.userData = data;
       });
       return this.userData;
   }
-
-  // ngOnDestroy() {
-  //     this.subscription.unsubscribe();
-  // }
 }
