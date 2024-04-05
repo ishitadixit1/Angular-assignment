@@ -1,19 +1,15 @@
-<section>
-                <h5>{{ user.id }}: {{ user.name | uppercase }}</h5>
-                <p>Address: {{ user.address.street }}, {{ user.address.city }}</p>
-                  <h6>Information</h6>
-
-                      <h6>Email</h6>
-                     {{ user.email }}
-
-                      <h6>Phone</h6>
-                     {{ user.phone }}
-
-                  <h6>Company</h6>
-
-                      <h6>Name</h6>
-                    {{ user.company.name }}
-                      <h6>Description</h6>
-                     {{ user.company.bs }}
-</section>
+<h3 class="text-center mt-2">User Details :</h3>
+<div class="row justify-content-center m-6">
+<div class="card text-light bg-dark" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{users.name}}</h5>
+    <h6>Company :</h6><p class="card-text"> {{ users.company.name }}</p>
+    <h6>Address :</h6><p class="card-text"> {{ users.address.city }}</p>
+    <h6>Email :</h6>  <p class="card-text"> {{ users.email }}</p>
+    <h6>Phone :</h6> <p class="card-text"> {{ users.phone }}</p>
+    <p class="card-text"></p>
+  </div>
+</div>
+</div>
+                    
             
